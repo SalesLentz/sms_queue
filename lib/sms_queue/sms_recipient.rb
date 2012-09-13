@@ -1,3 +1,5 @@
 class SmsRecipient
-  # currently a dummy for testing core extensions
+  def self.build_in_processed_status(*args)
+    puts "SmsRecipient - Dummy: #{args.inspect}"
+  end
 end
