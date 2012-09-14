@@ -1,7 +1,5 @@
 require "active_model"
-require 'sms_queue/extensions/array'
-require 'sms_queue/extensions/object'
-require 'sms_queue/extensions/string'
+require 'sms_queue/extensions/base'
 require 'sms_queue/mass_mailing'
 require 'sms_queue/sms_recipient'
 require 'sms_queue/version'
