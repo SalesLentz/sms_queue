@@ -1,9 +1,9 @@
 # SmsQueue
 
-Provides mass sms sending capability to your Ruby on Rails application. 
-A batch sms sending job is splitted into single jobs for each recipient and pushed into a queue. 
+Provides SMS mass mailing capability to your Ruby on Rails application. 
+A batch job is splitted into single jobs for each recipient and pushed into a queue. 
 The queue will be processed in background to not affect your applications response time. 
-The final sms sending will be done via an third-party sms gateway
+The final SMS sending will be done via an third-party SMS gateway
 
 Processing the jobs in background is done with the help of [http://mperham.github.com/sidekiq](http://mperham.github.com/sidekiq). 
 Please check the requirements of Sidekiq if you want to use this gem.
@@ -32,7 +32,7 @@ to copy the needed migrations to `db/migrations`. After this you can migrate you
 
 ## Usage
 
-TODO: Write usage instructions here
+You can start a new mass mailing by running `SmsQueue.send_mass_mailing(phone_numbers, message)`. Just provide an array of phone numbers as first, and the desired message as second parameter.
 
 
 ## Testing
