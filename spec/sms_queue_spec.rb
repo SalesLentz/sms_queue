@@ -3,11 +3,13 @@
 require 'spec_helper'
 
 describe SmsQueue do
-  let(:phone_numbers) { ("1".."10").to_a }
+  let(:mass_mailing) { double(SmsQueue::MassMailing) }
   let(:message) { "Lorem ipsum "}
+  let(:phone_numbers) { ("1".."10").to_a }
+
+  before { SmsQueue::MassMailing.stub(:new_batch_job => mass_mailing) }
 
   context "#self.send_mass_mailing" do
-    let(:mass_mailing) { double(SmsQueue::MassMailing) }
     it "should not raise an error" do
       expect { SmsQueue.send_mass_mailing(phone_numbers, message) }.not_to raise_error
     end
