@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency              'activemodel', '~> 3.2.0'
+  gem.add_dependency              'sidekiq', '~> 2.3.1'
 
   gem.add_development_dependency  'rspec'
   gem.add_development_dependency  'shoulda-matchers'

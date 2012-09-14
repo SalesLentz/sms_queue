@@ -1,3 +1,4 @@
+require 'sidekiq'
 require 'sms_queue/workers/mass_mailing_worker'
 
 
